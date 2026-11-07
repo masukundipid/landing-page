@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Reset Dasar (Perbaikan sintaks dari - ke *) */
+        /* Reset Dasar */
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +18,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Background Gradasi bergerak (Pink -> Purple -> Blue) */
+        /* Background Gradasi Bergerak (Pink -> Purple -> Blue) */
         body {
             background: linear-gradient(135deg, #ff758f, #b5179e, #7209b7, #4cc9f0);
             background-size: 300% 300%;
@@ -50,16 +50,15 @@
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
         }
 
-        /* Bagian Profil dengan Ring Aksen Kuning (±10% Pop) */
+        /* Avatar dengan Ring Aksen Biru Sedang */
         .profile-area .avatar img {
             width: 96px;
             height: 96px;
             border-radius: 50%;
-            /* Aksen Kuning pada Ring Avatar */
-            border: 3px solid #F4EB06; 
+            border: 3px solid #3b82f6; 
             object-fit: cover;
             margin-bottom: 16px;
-            box-shadow: 0 0 15px rgba(244, 235, 6, 0.4);
+            box-shadow: 0 0 18px rgba(59, 130, 246, 0.45);
         }
 
         .profile-area h1 {
@@ -70,9 +69,9 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* Titik Aksen Kuning pada Judul */
+        /* Titik Aksen Biru pada Judul */
         .profile-area h1 .accent-dot {
-            color: #F4EB06;
+            color: #3b82f6;
         }
 
         .profile-area .bio {
@@ -89,7 +88,7 @@
             gap: 16px;
         }
 
-        /* Glassmorphism Link Card Standar */
+        /* Card Tombol Standar */
         .link-card {
             background: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -102,30 +101,30 @@
             display: block;
         }
 
-        /* Hover State dengan Sentuhan Kuning */
+        /* Hover State Tombol Biasa */
         .link-card:hover {
             background: rgba(255, 255, 255, 0.35);
-            border-color: #F4EB06;
-            color: #F4EB06;
+            border-color: #3b82f6;
+            color: #3b82f6;
             transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(244, 235, 6, 0.25);
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
         }
 
-        /* Primary Featured Link (Grup Anjem) dengan Aksen Kuning Dominan */
+        /* Tombol Utama (Featured) — Biru Sedang Padat */
         .link-card.featured {
-            background: #F4EB06;
-            color: #1e1b4b; /* Teks kontras gelap */
+            background: #3b82f6;
+            color: #ffffff; /* Teks putih kontras agar jelas */
             font-weight: 700;
-            border: 1px solid #F4EB06;
-            box-shadow: 0 6px 20px rgba(244, 235, 6, 0.35);
+            border: 1px solid #3b82f6;
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
         }
 
         .link-card.featured:hover {
-            background: #ffe600;
-            color: #000000;
-            border-color: #ffe600;
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(244, 235, 6, 0.5);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
         }
 
         /* Footer */
@@ -151,7 +150,6 @@
         </div>
 
         <div class="links-area">
-            <!-- Tombol Utama dengan warna aksen kuning -->
             <a href="https://anjem.mahasiswaundip.my.id" class="link-card featured" target="_blank">
                 <span>Grup Anjem</span>
             </a>
