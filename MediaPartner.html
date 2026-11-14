@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syarat & Ketentuan Media Partner - Mahasiswa Undip</title>
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/u/0/d/1Z1Pk5fW79Ytk4Bn-umtBmLKZ0tMxc7uD">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-canvas: #f4f4f0;
+            --card-white: #ffffff;
+            --ink-black: #111111;
+            --text-muted: #4b5563;
+            --accent-blue: #3b82f6;
+            --accent-blue-hover: #2563eb;
+            --accent-yellow: #fde047;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-canvas);
+            background-image: radial-gradient(#cbd5e1 1.25px, transparent 1.25px);
+            background-size: 20px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 16px;
+            color: var(--ink-black);
+        }
+
+        .container {
+            background-color: var(--card-white);
+            border: 3px solid var(--ink-black);
+            border-radius: 16px;
+            box-shadow: 8px 8px 0px var(--ink-black);
+            padding: 36px 28px;
+            width: 100%;
+            max-width: 520px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--card-white);
+            border: 2px solid var(--ink-black);
+            border-radius: 8px;
+            box-shadow: 3px 3px 0px var(--ink-black);
+            padding: 8px 14px;
+            text-decoration: none;
+            color: var(--ink-black);
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+            transition: transform 0.12s ease, box-shadow 0.12s ease;
+        }
+
+        @media (hover: hover) {
+            .back-btn:hover {
+                transform: translate(-2px, -2px);
+                box-shadow: 5px 5px 0px var(--ink-black);
+                background-color: #f8fafc;
+            }
+        }
+
+        .back-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px var(--ink-black);
+        }
+
+        .header-area {
+            text-align: left;
+            margin-bottom: 24px;
+            border-bottom: 2.5px solid var(--ink-black);
+            padding-bottom: 16px;
+        }
+
+        .header-area h1 {
+            color: var(--ink-black);
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        .terms-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .term-item {
+            display: flex;
+            gap: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            line-height: 1.5;
+            align-items: flex-start;
+        }
+
+        .term-number {
+            background-color: var(--ink-black);
+            color: white;
+            font-weight: 800;
+            font-size: 0.8rem;
+            min-width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .term-item p {
+            color: var(--ink-black);
+        }
+
+        .term-item a {
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .note-text {
+            font-size: 0.825rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .action-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        /* Selektor tombol dengan spesifisitas tinggi agar warna teks stabil */
+        .term-item a.btn-action,
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background-color: var(--accent-blue);
+            color: #ffffff;
+            border: 2px solid var(--ink-black);
+            border-radius: 8px;
+            box-shadow: 3px 3px 0px var(--ink-black);
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 0.825rem;
+            text-decoration: none;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+        }
+
+        .term-item a.btn-action.download,
+        .btn-action.download {
+            background-color: var(--accent-yellow);
+            color: var(--ink-black);
+        }
+
+        @media (hover: hover) {
+            .term-item a.btn-action:hover,
+            .btn-action:hover {
+                transform: translate(-2px, -2px);
+                box-shadow: 5px 5px 0px var(--ink-black);
+            }
+            .term-item a.btn-action:not(.download):hover,
+            .btn-action:not(.download):hover {
+                background-color: var(--accent-blue-hover);
+                color: #ffffff;
+            }
+            .term-item a.btn-action.download:hover,
+            .btn-action.download:hover {
+                background-color: #facc15;
+                color: var(--ink-black);
+            }
+        }
+
+        .term-item a.btn-action:active,
+        .btn-action:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px var(--ink-black);
+        }
+
+        .footer {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 2px dashed #e2e8f0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <a href="index.html" class="back-btn">
+            <span>&#8592;</span> Kembali ke Beranda
+        </a>
+
+        <header class="header-area">
+            <h1>Syarat & Ketentuan Media Partner MahasiswaUndip.id</h1>
+        </header>
+
+        <section class="terms-content">
+            <div class="term-item">
+                <span class="term-number">1</span>
+                <div>
+                    <p>Temen-temen panitia event wajib Follow <strong>instagram.com/Mahasiswaundip.id</strong> (minimal 25 akun). Kirim list akun yang sudah follow ke WA kami:</p>
+                    <div class="action-group">
+                        <a href="https://wa.me/6281390776494?text=Kak%2C%20berikut%20list%20akun%20panitia%20yang%20sudah%20follow%20akun%20ig%20Mahasiswa%20Undip%20Id" class="btn-action" target="_blank" rel="noopener noreferrer">
+                            Kirim List ke WA Kami ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="term-item">
+                <span class="term-number">2</span>
+                <p>Wajib follow sampai event selesai.</p>
+            </div>
+
+            <div class="term-item">
+                <span class="term-number">3</span>
+                <div>
+                    <p>Memuat logo MahasiswaUndip.id di dalam banner event, poster event, dan akun instagram event.</p>
+                    <div class="action-group">
+                        <a href="https://drive.google.com/file/d/1Z1Pk5fW79Ytk4Bn-umtBmLKZ0tMxc7uD/view?usp=drivesdk" class="btn-action download" target="_blank" rel="noopener noreferrer">
+                            Download Logo ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="term-item">
+                <span class="term-number">4</span>
+                <p>Setelah memenuhi poin 1, 2, &amp; 3 di atas, silahkan mengirim file poster untuk feeds &amp; story beserta caption ke email kami <strong>mahasiswaundip.id@gmail.com</strong></p>
+            </div>
+
+            <div class="term-item">
+                <span class="term-number">5</span>
+                <p>Mahasiswaundip.id akan melakukan upload feeds &amp; story 1× (satu kali) di instagram/mahasiswaundip.id dengan waktu upload yang disesuaikan dalam jadwal kami.</p>
+            </div>
+
+            <div class="term-item">
+                <span class="term-number">6</span>
+                <p>Mahasiswaundip.id berhak menolak melakukan upload dan take down konten media partner jika poin 1, 2, &amp; 3 tidak terpenuhi.</p>
+            </div>
+
+            <div class="term-item">
+                <span class="term-number">7</span>
+                <div>
+                    <p>Media partner MahasiswaUndip.id tidak dipungut biaya*</p>
+                    <p class="note-text">*S&amp;K media partner ini hanya berlaku untuk event mahasiswa saja. Event lain silahkan chat ke nomor WA kami untuk ketentuan lebih lanjut:</p>
+                    <div class="action-group" style="margin-top: 8px;">
+                        <a href="https://wa.me/6281390776494?text=Kak%2C%20mau%20media%20partner%20syaratnya%20apa%20kak%3F" class="btn-action" target="_blank" rel="noopener noreferrer">
+                            Chat WA Kami ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="term-item">
+                <span class="term-number">8</span>
+                <p>Dengan mengirimkan file sebagaimana yang dimaksud dalam poin 4, maka menyetujui S&amp;K Media Partner MahasiswaUndip.id.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Mahasiswa Undip Id. All rights reserved.</p>
+        </footer>
+    </main>
+
+</body>
+</html>
