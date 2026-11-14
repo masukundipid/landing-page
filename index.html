@@ -7,170 +7,213 @@
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/u/0/d/1Z1Pk5fW79Ytk4Bn-umtBmLKZ0tMxc7uD">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Reset Dasar */
+        /* Reset Dasar & Variabel Warna Neo-Brutalism */
+        :root {
+            --bg-canvas: #f4f4f0;
+            --card-white: #ffffff;
+            --ink-black: #111111;
+            --text-muted: #4b5563;
+            --accent-blue: #3b82f6;
+            --accent-blue-hover: #2563eb;
+            --accent-yellow: #fde047;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        /* Background Gradasi Bergerak (Pink -> Purple -> Blue) */
+        /* Background Off-White dengan Dot Grid Minimalis */
         body {
-            background: linear-gradient(135deg, #ff758f, #b5179e, #7209b7, #4cc9f0);
-            background-size: 300% 300%;
-            animation: gradientMove 15s ease infinite;
+            background-color: var(--bg-canvas);
+            background-image: radial-gradient(#cbd5e1 1.25px, transparent 1.25px);
+            background-size: 20px 20px;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 24px 16px;
+            color: var(--ink-black);
         }
 
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Container Utama (Glassmorphism Effect) */
+        /* Container Utama: Card Putih + Border Tebal + Hard Drop Shadow */
         .container {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            padding: 40px 30px;
-            border-radius: 24px;
+            background-color: var(--card-white);
+            border: 3px solid var(--ink-black);
+            border-radius: 16px;
+            box-shadow: 8px 8px 0px var(--ink-black);
+            padding: 36px 28px;
             width: 100%;
-            max-width: 450px;
+            max-width: 440px;
             text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
         }
 
-        /* Avatar dengan Ring Aksen Biru Sedang */
+        /* Avatar dengan Border Tebal & Hard Shadow */
+        .profile-area .avatar {
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
         .profile-area .avatar img {
-            width: 96px;
-            height: 96px;
+            width: 92px;
+            height: 92px;
             border-radius: 50%;
-            border: 3px solid #3b82f6; 
+            border: 3px solid var(--ink-black);
             object-fit: cover;
-            margin-bottom: 16px;
-            box-shadow: 0 0 18px rgba(59, 130, 246, 0.45);
+            display: block;
+            background-color: var(--card-white);
+            box-shadow: 4px 4px 0px var(--accent-blue);
         }
 
         .profile-area h1 {
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: 700;
+            color: var(--ink-black);
+            font-size: 1.55rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
             margin-bottom: 8px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         /* Titik Aksen Biru pada Judul */
         .profile-area h1 .accent-dot {
-            color: #3b82f6;
+            color: var(--accent-blue);
         }
 
         .profile-area .bio {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.95rem;
-            margin-bottom: 32px;
-            line-height: 1.4;
+            color: var(--text-muted);
+            font-size: 0.925rem;
+            font-weight: 500;
+            margin-bottom: 28px;
+            line-height: 1.45;
+            padding: 0 8px;
         }
 
-        /* Tombol Link */
+        /* Area Daftar Tombol */
         .links-area {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
         }
 
         /* Card Tombol Standar */
         .link-card {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 16px;
-            border-radius: 14px;
+            background-color: var(--card-white);
+            border: 2.5px solid var(--ink-black);
+            border-radius: 12px;
+            box-shadow: 4px 4px 0px var(--ink-black);
+            padding: 15px 20px;
             text-decoration: none;
-            color: #ffffff;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        /* Hover State Tombol Biasa */
-        .link-card:hover {
-            background: rgba(255, 255, 255, 0.35);
-            border-color: #3b82f6;
-            color: #3b82f6;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
-        }
-
-        /* Tombol Utama (Featured) — Biru Sedang Padat */
-        .link-card.featured {
-            background: #3b82f6;
-            color: #ffffff; /* Teks putih kontras agar jelas */
+            color: var(--ink-black);
             font-weight: 700;
-            border: 1px solid #3b82f6;
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+            font-size: 0.975rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
         }
 
-        .link-card.featured:hover {
-            background: #2563eb;
+        .link-card .arrow {
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: transform 0.12s ease;
+        }
+
+        /* Efek Hover Desktop */
+        @media (hover: hover) {
+            .link-card:hover {
+                background-color: var(--accent-yellow);
+                transform: translate(-2px, -2px);
+                box-shadow: 6px 6px 0px var(--ink-black);
+            }
+
+            .link-card:hover .arrow {
+                transform: translate(2px, -2px);
+            }
+        }
+
+        /* Efek Tekan Fisik (Klik / Tap Mobile) */
+        .link-card:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px var(--ink-black);
+        }
+
+        /* Tombol Utama (Featured) — Biru Solid dengan Kontras Tinggi */
+        .link-card.featured {
+            background-color: var(--accent-blue);
             color: #ffffff;
-            border-color: #2563eb;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+        }
+
+        @media (hover: hover) {
+            .link-card.featured:hover {
+                background-color: var(--accent-blue-hover);
+                color: #ffffff;
+                transform: translate(-2px, -2px);
+                box-shadow: 6px 6px 0px var(--ink-black);
+            }
         }
 
         /* Footer */
         .footer {
-            margin-top: 32px;
+            margin-top: 30px;
+            padding-top: 16px;
+            border-top: 2px dashed #e2e8f0;
         }
 
         .footer p {
-            color: rgba(255, 255, 255, 0.65);
+            color: var(--text-muted);
             font-size: 0.75rem;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="profile-area">
+    <main class="container">
+        <header class="profile-area">
             <div class="avatar">
                 <img src="https://lh3.googleusercontent.com/u/0/d/1Z1Pk5fW79Ytk4Bn-umtBmLKZ0tMxc7uD" alt="Logo Mahasiswa Undip">
             </div>
             <h1>Mahasiswa Undip<span class="accent-dot">.id</span></h1>
-            <p class="bio">Digital Platform & Informasi Komunitas Mahasiswa Undip</p>
-        </div>
+            <p class="bio">Digital Platform &amp; Informasi Komunitas Mahasiswa Undip</p>
+        </header>
 
-        <div class="links-area">
-            <a href="https://anjem.mahasiswaundip.my.id" class="link-card featured" target="_blank">
+        <nav class="links-area" aria-label="Tautan Utama">
+            <a href="https://anjem.mahasiswaundip.my.id" class="link-card featured" target="_blank" rel="noopener noreferrer">
                 <span>Grup Anjem</span>
+                <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
 
-            <a href="https://instagram.com/mahasiswaundip.id" class="link-card" target="_blank">
+            <a href="https://instagram.com/mahasiswaundip.id" class="link-card" target="_blank" rel="noopener noreferrer">
                 <span>Instagram</span>
+                <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
 
-            <a href="https://tiktok.com/@mahasiswaundip.id" class="link-card" target="_blank">
-                <span>Tiktok</span>
+            <a href="https://tiktok.com/@mahasiswaundip.id" class="link-card" target="_blank" rel="noopener noreferrer">
+                <span>TikTok</span>
+                <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
             
-            <a href="https://wa.me/message/XPJKQLB2HZQIM1" class="link-card" target="_blank">
+            <a href="https://wa.me/message/XPJKQLB2HZQIM1" class="link-card" target="_blank" rel="noopener noreferrer">
                 <span>Hubungi Admin</span>
+                <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
-        </div>
 
-        <div class="footer">
+            <!-- Tombol Navigasi ke Halaman Kedua (Media Partner) -->
+            <a href="MediaPartner.html" class="link-card">
+                <span>Syarat Media Partner</span>
+                <span class="arrow" aria-hidden="true">&#8594;</span>
+            </a>
+        </nav>
+
+        <footer class="footer">
             <p>&copy; 2026 Mahasiswa Undip Id. All rights reserved.</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
 </body>
 </html>
